@@ -7,6 +7,7 @@ body{
 
 #titulo{
     color: #232946;
+    font-size: 40px;
 }
 .container{
     display: flex;
@@ -22,7 +23,8 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    border:5px solid #000;
+    border: 1px solid #000;
+    box-shadow: 15px 10px 10px;
     border-radius: 10px;
     background-color: #b8c1ec;
 }
@@ -58,7 +60,7 @@ input{
 }
 
 .confirm_data button {
-    color: #b8c1ec;
+    color: #fffffe;
     width: 100px;
     height: 30px;
     background-color: #121629;
