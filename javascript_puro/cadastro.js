@@ -1,5 +1,5 @@
 import bd from './bancoDados.js';
-import { menu } from './index.js';
+import { menu } from '../index.js';
 import { prompt } from 'readline-sync';
 
 function janelaCadastro() {

@@ -1,5 +1,5 @@
 import { prompt } from "readline-sync"
-import { menu } from './index.js';
+import { menu } from '../index.js';
 import bd from './bancoDados.js';
 
 function janelaBusca() {
