@@ -5,6 +5,15 @@ body{
     margin: 0;
     padding: 0;
 }
+.button {
+    color: #fffffe;
+    width: 80px;
+    height: 30px;
+    background-color: #121629;
+    border: 1px solid #7f5af0;
+    border-radius: 5px;
+    margin: 5px;
+}
 
 #titulo{
     color: #232946;
@@ -20,7 +29,7 @@ body{
 }
 
 .box{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -31,6 +40,7 @@ body{
     background-color: #b8c1ec;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .entry_data {
     display: flex;
     flex-direction: column;
@@ -54,12 +64,25 @@ input{
     margin-bottom: 10px;
 }
 
-.confirm_data button {
-    color: #fffffe;
-    width: 80px;
-    height: 30px;
-    background-color: #121629;
-    border: 1px solid #7f5af0;
-    border-radius: 5px;
-    margin: 5px;
+.sign_up {
+    display: grid;
+    justify-content: space-around;
+    background-color: #b8c1ec;
+    margin-inline: 390px;
+    margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    border: 1px solid #000;
+    box-shadow: 10px 10px 15px;
+    border-radius: 10px;
 }
+
+.sign_up h3 {
+    display: grid;
+    justify-content: center;
+}
+.sign_up button{
+    margin-top: 20px;
+    margin-inline: 200px;
+}
+
