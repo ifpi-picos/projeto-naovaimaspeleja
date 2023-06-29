@@ -1,15 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
 *{box-sizing: border-box;}
-body{
- margin: 0;
- padding: 0;   
-}
 
-.grid{
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+.grid {
     display: grid;
+    grid-template-columns: 15% 85%;
+    height: 100%;
+}
+  
+.vertical_menu {
+    display: grid;
+    grid-template-rows: 25%;
+    background-color: #f2f2f2;
+    height: 100vh;
+    border-right: 1px solid #000;
 }
 
-.vertical_container{
-    display: block;
-    width: 200px;
+.user_space{
+    border-bottom: 1px solid #000;
+}
+
+.content_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title{
+    font-family: 'Kodchasan', sans-serif;
 }
