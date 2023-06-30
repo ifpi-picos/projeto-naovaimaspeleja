@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .container{
     height: 100vh;
     display: grid;
@@ -32,51 +33,17 @@ body{
     display: grid;
     grid-template-rows: 15% 10% 75%;
     background-color: aquamarine;
-    justify-items: center;
 }
 
-.container_content h1,h2{
-    font-family: 'Kodchasan', sans-serif;
-}
-
-.form {
+.title{
     display: grid;
-    grid-template-rows: 80% 20%;
     justify-items: center;
+}
+
+.box_list{
+    display: grid;
+    grid-template-columns: 30% 30% 30% 10%;
+    gap:1%;
+    border: 5px solid #ccc;
     margin: 2%;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: x-large;
-}
-
-.form input[type="text"]{
-    font-size: x-large;
-    width: 100%;
-    border: 1px solid rgb(36, 197, 143);
-}
-
-.form input[type="number"]{
-    font-size: x-large;
-    width: 100%;
-    border: 1px solid rgb(36, 197, 143);
-}
-
-.form button{
-    font-size:large;
-    height: 75%;
-    width: 50%;
-    border-radius: 2%;
-    box-shadow: 2px 6px 2px #000;
-    background-color: rgb(23, 170, 170);
-    color: blanchedalmond;
-}
-
-.input_cadastro {
-    display: grid;
-    align-content: space-evenly;
-}
-
-.choose_state{
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
