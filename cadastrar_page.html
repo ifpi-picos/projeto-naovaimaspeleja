@@ -13,18 +13,27 @@
             <button type="button">LISTAR ITENS</button>
         </div>
         <div class="container_content">
-            <h1>Lista de Compras</h1>
-            <h2>CADASTRO</h2>
+                <h1>Lista de Compras</h1>
+                <h2>CADASTRO</h2>
             <div class="form">
-                <label for="entry-name">Insira o nome do item:</label>
-                <input type="text" id="entry-name">
-                <label for="entry_price">Insira o valor do item:</label>
-                <input type="text" id="entry_price">
-                <span>Selecione o estado do seu item:</span>
-                <label for="comprar">Desejo comprar</label>
-                <input type="radio" id="comprar">
-                <label for="comprado">Já comprei</label>
-                <input type="radio" id="comprado">
+                <div class="input_cadastro">
+                    <div class="input_dados">
+                        <label for="entry-name">Insira o nome do item:</label>
+                        <input type="text" id="entry-name">
+                    </div>
+                    <div class="input_dados">
+                        <label for="entry_price">Insira o valor do item:</label>
+                        <input type="number" id="entry_price">
+                    </div>
+                    <span>Selecione o estado do seu item:</span>
+                    <div class="choose_state">
+                        <label for="comprar">Desejo comprar</label>
+                        <input type="radio" id="comprar" name="state">
+                        <label for="comprado">Já comprei</label>
+                        <input type="radio" id="comprado" name="state">
+                    </div>
+                </div>
+                <button type="button">CADASTRAR</button>
             </div>
         </div>
     </div>
