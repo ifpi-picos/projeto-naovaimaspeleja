@@ -73,6 +73,11 @@ body{
     display: grid;
     align-content: space-evenly;
 }
+
+.form label{
+    font-size: x-large;
+}
+
 .choose_state{
     display: flex;
     justify-content: center;
