@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap');
+*{box-sizing: border-box;}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.vertical_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(86, 184, 184);
+}
+
+.vertical_container button{
+    height: 10vh;
+    box-shadow: 0px 6px 2px #000;
+}
+
+.container_content{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: baseline;
+}
