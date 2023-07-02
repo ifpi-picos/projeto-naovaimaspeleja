@@ -32,16 +32,14 @@ function cadastrar_itens(){
     //armazena o item no localstorage
     listaItens.push(item)
     localStorage.setItem('armazenados', JSON.stringify(listaItens))
-    limpar_input()
+    
+    // Limpa os campos de input
+        document.getElementById('entry_name').value = '';
+        document.getElementById('entry_price').value = '';
+        radioComprar.checked = false;
+        radioComprado.checked = false;
 }
 
-// Limpa os campos de input
-function limpar_input (){
-    let radioComprar = document.getElementById('comprar');
-    let radioComprado = document.getElementById('comprado');
-    radioComprar.checked = false;
-    radioComprado.checked = false;
-}
 
 // function exibirItens() {
 //     // Obtém a referência da tabela
