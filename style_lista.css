@@ -21,7 +21,7 @@ body{
     background-color: #6764EA;
 }
 
-.vertical_container button{
+.button_unhold{
     color: blanchedalmond;
     font-size: medium;
     height: 10vh;
@@ -29,6 +29,12 @@ body{
     background-color: #0038FF;
 }
 
+.button_hold {
+    color: blanchedalmond;
+    font-size: medium;
+    height: 10vh;
+    background-color: #001f8f;
+}
 .container_content{
     display: grid;
     grid-template-rows: 15% 10% 75%;
