@@ -7,11 +7,27 @@ function redirectToLista() {
     window.location.href = "lista_page.html" ;
 }
 
-// // Seleciona os botões pelo tipo e adiciona um ouvinte de evento para cada um
-// let buttons = document.querySelectorAll('button[type="button"]');
-// buttons.forEach(function(button) {
-//     button.addEventListener('click', function() {
-//         // Chama a função de redirecionamento passando a URL da outa página
-//         redirectToPage('outra_pagina.html');
-//     });
-// });
+const listaItens = JSON.parse(localStorage.getItem('armazenados')) || [];
+//Códigos para página de cadastro
+
+function cadastrar_itens(){
+    // Obtém os valores dos campos de input
+    let name = document.getElementById(entry_name);
+    let price = document.getElementById(entry_price);
+    // Obtém o valor selecionado no radio
+    let estadoItem;
+    let radioComprar = document.getElementById('comprar');
+    let radioComprado = document.getElementById('comprado');
+    if (radioComprar.checked) {
+        estadoItem = 'Para Comprar';
+    } else if (radioComprado.checked) {
+        estadoItem = 'Já comprei';
+    }
+
+    const item = {
+        nome: name,
+        valor: price,
+        estado: estadoItem
+      };
+      localStorage.setItem('armazenados', JSON.stringify(items))
+}
