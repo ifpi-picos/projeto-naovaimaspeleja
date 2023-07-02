@@ -23,11 +23,18 @@ function cadastrar_itens(){
     } else if (radioComprado.checked) {
         estadoItem = 'Já comprei';
     }
-
+    //armazena os campos preenchidos no item 
     const item = {
         nome: name,
         valor: price,
         estado: estadoItem
-      };
-      localStorage.setItem('armazenados', JSON.stringify(items))
+    };
+    //armazena o item no localstorage
+    localStorage.setItem('armazenados', JSON.stringify(items))
+
+    // Limpa os campos de input
+    document.getElementById('entry-name').value = '';
+    document.getElementById('entry_price').value = '';
+    radioComprar.checked = false;
+    radioComprado.checked = false;
 }
