@@ -1,10 +1,10 @@
 // Funções para redirecionar para outra página
 function redirectToCadastro() {
-    window.location.href = 'cadastrar_page.html' ;
+    window.location.href = "cadastrar_page.html" ;
 }
 
 function redirectToLista() {
-    window.location.href = 'lista_page.html' ;
+    window.location.href = "lista_page.html" ;
 }
 
 // // Seleciona os botões pelo tipo e adiciona um ouvinte de evento para cada um
