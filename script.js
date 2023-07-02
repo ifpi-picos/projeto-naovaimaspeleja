@@ -39,6 +39,7 @@ function cadastrar_itens(){
     document.getElementById('entry_price').value = '';
     radioComprar.checked = false;
     radioComprado.checked = false;
+    exibirItens();
 }
 
 
@@ -78,7 +79,3 @@ function exibirItens() {
         // Atualiza a exibição da tabela
         exibirItens();
 }
-
-window.addEventListener('load', function() {
-    exibirItens();
-});
