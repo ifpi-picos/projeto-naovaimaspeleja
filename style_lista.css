@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgb(86, 184, 184);
+    background-color: #6764EA;
 }
 
 .vertical_container button{
@@ -26,13 +26,17 @@ body{
     font-size: medium;
     height: 10vh;
     box-shadow: 0px 6px 2px #000;
-    background-color: rgb(23, 170, 170);
+    background-color: #0038FF;
 }
 
 .container_content{
     display: grid;
     grid-template-rows: 15% 10% 75%;
-    background-color: aquamarine;
+    background-color: #96A7E1;
+}
+
+.container_content h1{
+    font-family: 'Kodchasan', sans-serif;
 }
 
 .title{
