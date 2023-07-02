@@ -1,0 +1,15 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .font-arial {
+    font-family: Arial, sans-serif;
+  }
+  .font-kodchasan {
+    font-family: Kodchasan, sans-serif;
+  }
+  .font-ubuntu {
+    font-family: Ubuntu, sans-serif;
+  }
+  
