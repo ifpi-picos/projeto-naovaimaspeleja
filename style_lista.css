@@ -64,9 +64,7 @@ th {
 thead{
     height: 10%;
 }
-tbody{
-    height: 90%;
-}
+
 table,th,td {
     border: 2px solid black;
     padding: 5px;
