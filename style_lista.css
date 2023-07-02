@@ -43,22 +43,34 @@ body{
     display: grid;
     justify-items: center;
 }
-
+.selector{
+    margin: 20px;
+    padding: 0 auto;
+    margin-top: 5px;
+}
+select{
+    font-size: 14px;
+    padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .box_list{
-    display: flex;
-    flex-direction: row;
-    margin: 2%;
+    display: block;
+    margin: 40px;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
+    text-align: center;
 }
 
 th {
     background-color: #6764EA;
-    position: sticky;
+    position: relative;
     top: 0;
+
 }
 
 thead{
