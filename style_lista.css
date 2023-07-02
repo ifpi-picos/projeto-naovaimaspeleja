@@ -52,7 +52,7 @@ select{
     font-size: 14px;
     padding: 5px 5px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 .box_list{
