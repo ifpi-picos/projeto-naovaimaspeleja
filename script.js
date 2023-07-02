@@ -12,8 +12,8 @@ const listaItens = JSON.parse(localStorage.getItem('armazenados')) || [];
 
 function cadastrar_itens(){
     // Obtém os valores dos campos de input
-    let name = document.getElementById(entry_name);
-    let price = document.getElementById(entry_price);
+    let name = document.getElementById('entry_name');
+    let price = document.getElementById('entry_price');
     // Obtém o valor selecionado no radio
     let estadoItem;
     let radioComprar = document.getElementById('comprar');
@@ -30,7 +30,9 @@ function cadastrar_itens(){
         estado: estadoItem
     };
     //armazena o item no localstorage
-    localStorage.setItem('armazenados', JSON.stringify(items))
+
+    listaItens.push(item)
+    localStorage.setItem('armazenados', JSON.stringify(listaItens))
 
     // Limpa os campos de input
     document.getElementById('entry-name').value = '';
