@@ -14,7 +14,14 @@
         </div>
         <div class="container_content">
             <div class="title"><h1>Lista de Compras</h1></div>
-            <div class="selector"></div>
+            <div class="selector">
+                <label for="">Ordenar por:</label><br>
+                <select name="filtrar" id="filtrar">
+                    <option value="alfabetica">Ordem Alfabética</option>
+                    <option value="barato">Mais Barato</option>
+                    <option value="caro">Mais Caro</option>
+                </select>
+            </div>
             <div class="box_list">
                 <table class="itens_table">
                     <thead>
@@ -23,11 +30,8 @@
                             <th>Valor</th>
                             <th>Estado</th>
                             <th>Ações</th>
-                          </tr>
+                        </tr>
                     </thead>
-                    <tbody>
-                        
-                    </tbody>
                 </table>
             </div>
         </div>
