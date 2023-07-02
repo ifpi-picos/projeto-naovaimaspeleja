@@ -1,8 +1,13 @@
-const item_list = [];
-
-let input_name = document.getElementById('entry_name');
-let input_value = document.getElementById('entry_value');
-let choose_state = document.getElementsByName('state');
-function insert_item(){
-
+// Função para redirecionar para outra página
+function redirectToPage(pageUrl) {
+    window.location.href = pageUrl;
 }
+
+// Seleciona os botões pelo tipo e adiciona um ouvinte de evento para cada um
+let buttons = document.querySelectorAll('button[type="button"]');
+buttons.forEach(function(button) {
+button.addEventListener('click', function() {
+    // Chama a função de redirecionamento passando a URL da outa página
+    redirectToPage('outra_pagina.html');
+});
+});
