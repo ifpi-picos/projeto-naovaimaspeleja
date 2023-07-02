@@ -40,3 +40,45 @@ function cadastrar_itens(){
     radioComprar.checked = false;
     radioComprado.checked = false;
 }
+
+
+function exibirItens() {
+    // Obtém a referência da tabela
+    let tabela = document.querySelector('.itens_table');
+
+    // Obtém os itens armazenados no localStorage
+    let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+  
+    // Verifica se existem itens para exibir
+    if (armazenados.length === 0) {
+      let mensagem = document.createElement('tr');
+      mensagem.innerHTML = '<td colspan="4">Nenhum item cadastrado.</td>';
+      tabela.appendChild(mensagem);
+      return;
+    }
+    // Cria as linhas da tabela para cada item
+    for (let i = 0; i < itensArmazenados.length; i++) {
+      let item = itensArmazenados[i];
+      let linha = document.createElement('tr');
+      linha.innerHTML = '<td>' + item.nome + '</td>' +
+                        '<td>' + item.valor + '</td>' +
+                        '<td>' + item.estado + '</td>' +
+                        '<td><button onclick="removerItem(' + i + ')">Remover</button></td>';
+  
+      tabela.appendChild(linha);
+    }
+}
+  // Função para remover um item da lista
+    function removerItem(index) {
+        let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+        // Remove o item do array
+        itensArmazenados.splice(index, 1);
+        // Salva o array atualizado no localStorage
+        localStorage.setItem('armazenados', JSON.stringify(itensArmazenados));
+        // Atualiza a exibição da tabela
+        exibirItens();
+}
+
+window.addEventListener('load', function() {
+    exibirItens();
+});
