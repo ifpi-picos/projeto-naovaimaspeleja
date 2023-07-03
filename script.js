@@ -139,4 +139,23 @@ function fecharFormulario() {
     // Fecha o formulário de edição
     let popupContainer = document.querySelector('.popup-container');
     popupContainer.style.display = 'none';
-  }
+}
+
+function salvarEdicoes() {
+    let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+    let index = parseInt(document.getElementById('edit_form').getAttribute('data-index'));
+  
+    // Atualiza as informações do item com base nos campos de input
+    itensArmazenados[index].nome = document.getElementById('entry_name').value;
+    itensArmazenados[index].valor = document.getElementById('entry_price').value;
+    itensArmazenados[index].estado = document.getElementById('comprar').checked ? 'Para Comprar' : 'Já comprei';
+  
+    // Salva o array atualizado no localStorage
+    localStorage.setItem('armazenados', JSON.stringify(itensArmazenados));
+  
+    // Fecha o formulário de edição
+    fecharFormulario();
+  
+    // Atualiza a exibição da tabela
+    location.reload();
+}
