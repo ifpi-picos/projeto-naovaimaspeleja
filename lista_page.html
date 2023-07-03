@@ -45,13 +45,20 @@
             <input type="text" id="entry_name" name="entry_name" required><br><br>
             <label for="entry_price">Valor:</label>
             <input type="number" id="entry_price" name="entry_price" required><br><br>
-            <label for="comprar">Estado:</label>
-            <input type="radio" id="comprar" name="estado" value="Para Comprar" required>
-            <label for="comprar">Para Comprar</label>
-            <input type="radio" id="comprado" name="estado" value="Já comprei" required>
-            <label for="comprado">Já comprei</label><br><br>
-            <button type="button" onclick="salvarEdicoes()">Salvar mudanças</button>
-            <button type="button" onclick="fecharFormulario()">Fechar</button>
+            <span>Estado:</span>
+            <div class="radio">
+                <label for="comprar">Para Comprar</label>
+                <input type="radio" id="comprar" name="estado" value="Para Comprar" required>
+            </div>
+            <div class="radio">
+                <label for="comprado">Já comprei</label>
+                <input type="radio" id="comprado" name="estado" value="Já comprei" required>
+            </div>
+            <br><br>
+            <div class="form_buttons">
+                <button type="button" onclick="salvarEdicoes()">Salvar mudanças</button>
+                <button type="button" onclick="fecharFormulario()">Fechar</button>
+            </div>
           </form>
     <script src="script.js"></script>
 </body>

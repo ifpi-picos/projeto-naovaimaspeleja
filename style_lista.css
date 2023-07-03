@@ -12,6 +12,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 15% 85%;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .vertical_container{
@@ -27,6 +28,7 @@ body{
     height: 10vh;
     box-shadow: 0px 6px 2px #000;
     background-color: #0038FF;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .button_hold {
@@ -34,7 +36,9 @@ body{
     font-size: medium;
     height: 10vh;
     background-color: #001f8f;
+    font-family: 'Ubuntu', sans-serif;
 }
+
 .container_content{
     display: grid;
     grid-template-rows: 15% 10% 75%;
@@ -119,13 +123,70 @@ td:nth-child(4) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.479);
     justify-content: center;
     align-items: center;
+    font-family: 'Ubuntu', sans-serif;
 }
 
+
 .popup-form {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b5b3ce;
     padding: 20px;
     border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.popup-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.popup-form label {
+    font-size: 1.2rem;
+    color: #000000;
+    width: 100%;
+}
+
+.popup-form input,
+.popup-form select {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(36, 197, 143);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio label {
+    margin-right: 15px;
+
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form_buttons button {
+    font-size: 1.2rem;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #0038FF;
+    color: blanchedalmond;
 }
