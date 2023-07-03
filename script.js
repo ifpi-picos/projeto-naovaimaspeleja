@@ -19,7 +19,7 @@ function cadastrar_itens(){
     let radioComprar = document.getElementById('comprar');
     let radioComprado = document.getElementById('comprado');
     if (radioComprar.checked) {
-        estadoItem = 'Para Comprar';
+        estadoItem = 'Quero Comprar';
     } else if (radioComprado.checked) {
         estadoItem = 'Já comprei';
     }
