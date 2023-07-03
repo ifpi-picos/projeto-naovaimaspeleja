@@ -20,11 +20,11 @@
                 <div class="input_cadastro">
                     <div class="input_dados">
                         <label for="entry_name">Insira o nome do item:</label>
-                        <input type="text" id="entry_name">
+                        <input type="text" id="entry_name" required>
                     </div>
                     <div class="input_dados">
                         <label for="entry_price">Insira o valor do item:</label>
-                        <input type="number" id="entry_price">
+                        <input type="number" id="entry_price" required>
                     </div>
                     <span>Selecione o estado do seu item:</span>
                     <div class="choose_state">
@@ -34,7 +34,7 @@
                         <input type="radio" id="comprado" name="state">
                     </div>
                 </div>
-                <button type="button" onclick="cadastrar_itens()">CADASTRAR</button>
+                <button type="button" onclick="validarCampos()">CADASTRAR</button>
             </div>
         </div>
     </div>

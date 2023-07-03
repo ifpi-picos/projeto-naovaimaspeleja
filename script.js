@@ -10,6 +10,23 @@ function redirectToLista() {
 const listaItens = JSON.parse(localStorage.getItem('armazenados')) || [];
 //Códigos para página de cadastro
 
+function validarCampos() {
+  // Obtém os valores dos campos de input
+  let name = document.getElementById('entry_name').value;
+  let price = document.getElementById('entry_price').value;
+  let radioComprar = document.getElementById('comprar');
+  let radioComprado = document.getElementById('comprado');
+  
+  // Verifica se algum campo está vazio
+  if (name === '' || price === '' || (radioComprar.checked === false && radioComprado.checked === false)) {
+      alert('Por favor, preencha todos os campos antes de cadastrar.');
+      return;
+  }
+  
+  // Todos os campos estão preenchidos, chama a função cadastrar_itens()
+  cadastrar_itens();
+}
+
 function cadastrar_itens(){
     // Obtém os valores dos campos de input
     let name = document.getElementById('entry_name').value;
