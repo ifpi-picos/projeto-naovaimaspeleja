@@ -37,6 +37,22 @@
             </div>
         </div>
     </div>
+    <div class="popup-container">
+        <div class="popup-form">
+          <h2>Editar Item</h2>
+          <form id="edit_form">
+            <label for="entry_name">Nome:</label>
+            <input type="text" id="entry_name" name="entry_name" required><br><br>
+            <label for="entry_price">Valor:</label>
+            <input type="number" id="entry_price" name="entry_price" required><br><br>
+            <label for="comprar">Estado:</label>
+            <input type="radio" id="comprar" name="estado" value="Para Comprar" required>
+            <label for="comprar">Para Comprar</label>
+            <input type="radio" id="comprado" name="estado" value="Já comprei" required>
+            <label for="comprado">Já comprei</label><br><br>
+            <button type="button" onclick="salvarEdicoes()">Salvar mudanças</button>
+            <button type="button" onclick="fecharFormulario()">Fechar</button>
+          </form>
     <script src="script.js"></script>
 </body>
 </html>

@@ -40,24 +40,22 @@ function cadastrar_itens(){
         radioComprado.checked = false;
 }
 
-
 function exibirItens() {
     if (!localStorage.getItem('armazenados')) {
-        // Cria um array vazio e armazena no localStorage
-        localStorage.setItem('armazenados', JSON.stringify([]));
+      // Cria um array vazio e armazena no localStorage
+      localStorage.setItem('armazenados', JSON.stringify([]));
     }
-    // Obtém a referência da tabela
-    let tabela = document.querySelector('.itens_table');
-
     // Obtém a referência do corpo da tabela
     let tbody = document.querySelector('.itens_table tbody');
 
     // Limpa o corpo da tabela
     tbody.innerHTML = '';
+    // Obtém a referência da tabela
+    let tabela = document.querySelector('.itens_table');
 
     // Obtém os itens armazenados no localStorage
     let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
-  
+
     // Verifica se existem itens para exibir
     if (itensArmazenados.length === 0) {
       let mensagem = document.createElement('tr');
@@ -71,23 +69,74 @@ function exibirItens() {
       let item = itensArmazenados[i];
       let linha = document.createElement('tr');
       linha.classList.add('item-row'); // Adiciona a classe CSS
-      linha.innerHTML = '<td>' + item.nome + '</td>' +
-                        '<td>' + item.valor + '</td>' +
-                        '<td>' + item.estado + '</td>' +
-                        '<td><button onclick="removerItem(' + i + ')">Remover</button></td>';
-  
+      linha.setAttribute('data-index', i); // Atribui o data-index para a linha
+      linha.innerHTML =
+        '<td>' +
+        item.nome +
+        '</td>' +
+        '<td>' +
+        item.valor +
+        '</td>' +
+        '<td>' +
+        item.estado +
+        '</td>' +
+        '<td>' +
+        '<button onclick="removerItem(' +
+        i +
+        ')">Remover</button>' +
+        '<button onclick="abrirFormulario(' +
+        i +
+        ')">Editar</button>' +
+        '</td>';
+
       tabela.appendChild(linha);
     }
 }
-  // Função para remover um item da lista
-    function removerItem(index) {
-        let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
-        // Remove o item do array
-        itensArmazenados.splice(index, 1);
-        // Salva o array atualizado no localStorage
-        localStorage.setItem('armazenados', JSON.stringify(itensArmazenados));
-        // Atualiza a exibição da tabela
-        exibirItens();
+
+exibirItens();
+  
+// Função para remover um item da lista
+function removerItem(index) {
+    let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+    // Remove o item do array
+    itensArmazenados.splice(index, 1);
+    // Salva o array atualizado no localStorage
+    localStorage.setItem('armazenados', JSON.stringify(itensArmazenados));
+    // Encontra a linha da tabela pelo data-index e remove-a
+    let linhas = document.querySelectorAll('.itens_table tbody tr');
+    linhas.forEach((linha) => {
+      let dataIndex = parseInt(linha.getAttribute('data-index'));
+      if (dataIndex === index) {
+        linha.remove();
+      }
+    });
+    // Atualiza a exibição da tabela
+    location.reload();
 }
 
-exibirItens()
+function abrirFormulario(index) {
+    let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+    let item = itensArmazenados[index];
+    // Preenche os campos com as informações do item
+    document.getElementById('entry_name').value = item.nome;
+    document.getElementById('entry_price').value = item.valor;
+    if (item.estado === 'Para Comprar') {
+      document.getElementById('comprar').checked = true;
+    } else if (item.estado === 'Já comprei') {
+      document.getElementById('comprado').checked = true;
+    }
+    // Exibe o formulário de edição
+    let popupContainer = document.querySelector('.popup-container');
+    popupContainer.style.display = 'flex';
+}
+
+function fecharFormulario() {
+    // Limpa os campos do formulário
+    document.getElementById('entry_name').value = '';
+    document.getElementById('entry_price').value = '';
+    document.getElementById('comprar').checked = false;
+    document.getElementById('comprado').checked = false;
+    // Fecha o formulário de edição
+    let popupContainer = document.querySelector('.popup-container');
+    popupContainer.style.display = 'none';
+  }
