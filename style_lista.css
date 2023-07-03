@@ -162,12 +162,20 @@ td:nth-child(4) {
     margin-bottom: 10px;
     border: 1px solid rgb(36, 197, 143);
     font-family: 'Ubuntu', sans-serif;
+    margin-top: 10px;
+}
+
+.popup-form span {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .radio {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .radio label {

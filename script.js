@@ -177,3 +177,57 @@ function salvarEdicoes() {
     // Atualiza a exibição da tabela
     location.reload();
 }
+
+
+
+// Obtém o seletor "filtrar" do localStorage ou define um valor padrão
+var filtroSelecionado = localStorage.getItem('filtroSelecionado') || 'alfabetica';
+
+// Define o valor selecionado no seletor "filtrar"
+document.getElementById('filtrar').value = filtroSelecionado;
+
+// Adicione o evento de mudança ao seletor "filtrar"
+document.getElementById('filtrar').addEventListener('change', function() {
+  // Obtém o valor selecionado
+  let selectedValue = this.value;
+
+  // Salva o valor selecionado no localStorage
+  localStorage.setItem('filtroSelecionado', selectedValue);
+
+  // Chama a função para ordenar os itens com base no valor selecionado
+  ordenarItens(selectedValue);
+});
+
+// Função para ordenar os itens com base no valor selecionado
+function ordenarItens(selectedValue) {
+  // Obtém os itens armazenados do localStorage
+  let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
+
+  // Realiza a ordenação com base no valor selecionado
+  switch (selectedValue) {
+    case 'alfabetica':
+      itensArmazenados.sort(function(a, b) {
+        return a.nome.localeCompare(b.nome);
+      });
+      break;
+    case 'caro':
+      itensArmazenados.sort(function(a, b) {
+        return b.valor - a.valor;
+      });
+      break;
+    case 'barato':
+      itensArmazenados.sort(function(a, b) {
+        return a.valor - b.valor;
+      });
+      break;
+    default:
+      // Valor selecionado inválido, exibe os itens na ordem original
+      break;
+  }
+
+  // Atualiza o localStorage com os itens ordenados
+  localStorage.setItem('armazenados', JSON.stringify(itensArmazenados));
+
+  // Atualiza a exibição da tabela
+  location.reload();
+}
