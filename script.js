@@ -117,6 +117,7 @@ function removerItem(index) {
 function abrirFormulario(index) {
     let itensArmazenados = JSON.parse(localStorage.getItem('armazenados')) || [];
     let item = itensArmazenados[index];
+    document.getElementById('edit_form').setAttribute('data-index', index);
     // Preenche os campos com as informações do item
     document.getElementById('entry_name').value = item.nome;
     document.getElementById('entry_price').value = item.valor;
