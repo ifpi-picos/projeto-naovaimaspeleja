@@ -1,5 +1,5 @@
 import { prompt } from "readline-sync";
-import cadastro from './javascript_puro/cadastro.js'
+import cadastro from './cadastro.js';
 import busca from './busca.js'
 import editar from './editar.js'
 //Menu principal, onde todas as funções serão chamadas

@@ -1,0 +1,23 @@
+{
+  "name": "javascript_puro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifpi-picos/projeto-naovaimaspeleja.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ifpi-picos/projeto-naovaimaspeleja/issues"
+  },
+  "homepage": "https://github.com/ifpi-picos/projeto-naovaimaspeleja#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "type": "module"
+}
